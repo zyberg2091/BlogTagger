@@ -7,7 +7,8 @@ in many sectors of IT such as Amazon uses tags for customer segmentation.
 ## Prerequisites:
 
 - Install packages in the requirements.txt using `pip install -r requirements.txt`<br>
-
+- Download the spaCy English model after installation: <br>
+  python -m spacy download en_core_web_sm <br>
 - Follow the instruction given below to use albert-base model from hugging face model hub, you can change the model but it might need some customization in source code. 
   so albert model is adviced here to download.
 
