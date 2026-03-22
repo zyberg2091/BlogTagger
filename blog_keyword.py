@@ -78,7 +78,7 @@ class Blog_Tagger:
     for token,token_embed in self.candidate_token_embeddings.items():
       score[token]=cosine_similarity(np.array(token_embed).reshape(1,-1),np.array(self.blog_text_embedding))[0][0]  #compared to blog_text
 
-    k_tags=sorted(score,reverse=True,key=lambda item : item[1])
+    k_tags = sorted(score, key=lambda k: score[k], reverse=True)
     return k_tags[:k]
 
 
@@ -90,7 +90,7 @@ class Blog_Tagger:
 #   lemmatizer=WordNetLemmatizer()
 #   data=Blog_Data("https://influencermarketinghub.com/12-best-food-blogs/")
 #   Text_data=data.text_prep(req=['h1', 'h2', 'h3', 'h4', 'p'])
-#   tagger=Blog_Tagger(Text_data,maxlen=<int num>)  #no of strings
+#   tagger=Blog_Tagger(Text_data,maxlen=<num>)  #no of strings
 #   model=TFAutoModel.from_pretrained('albert-base-v2')
 #   tokenizer=AutoTokenizer.from_pretrained('albert-base-v2')
 #   tagger.token_embedding_gen(model,tokenizer)
