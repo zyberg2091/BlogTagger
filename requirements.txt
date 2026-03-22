@@ -1,6 +1,6 @@
-tensorflow==2.5.0
-spacy==3.0.0
-transformers
-sklearn
+tensorflow
+spacy
+transformers==4.46.0
+scikit-learn
 nltk
-BeautifulSoup==3.2.0
+beautifulsoup4
