@@ -24,7 +24,7 @@ nltk.download('stopwords')
 
 def tokens(Text_data,stop_words):
 
-  vector=CountVectorizer(ngram_range=(1,2), stop_words=stop_words).fit([Text_data])
+  vector = CountVectorizer(ngram_range=(1, 2), stop_words=list(stop_words)).fit([Text_data])
   all_candidate_tokens=vector.get_feature_names()
   return all_candidate_tokens
 
